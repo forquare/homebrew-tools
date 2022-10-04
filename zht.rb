@@ -5,12 +5,12 @@
 class Zht < Formula
   desc " The ZSH History Tool "
   homepage "https://github.com/forquare/zht"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/forquare/zht/releases/download/0.1.0/zht_0.1.0_macOS_all.tar.gz"
-    sha256 "cad01d8772cbe0a5ff05a4f87b1ef84b1fa855fbf8ef4b0bb295fc71eb59e65d"
+    url "https://github.com/forquare/zht/releases/download/0.1.1/zht_0.1.1_macOS_all.tar.gz"
+    sha256 "16082d57645b310f50cad6f08b5dce36d0b76bbe80064da8eea0b2410a830635"
 
     def install
       bin.install "zht"
@@ -19,24 +19,24 @@ class Zht < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/forquare/zht/releases/download/0.1.0/zht_0.1.0_Linux_ARMv6.tar.gz"
-      sha256 "7d48fd7c6725dc4b6d9eb171f727ec24f3c33dfe0b6f7a4a14b14119a3cd5141"
+      url "https://github.com/forquare/zht/releases/download/0.1.1/zht_0.1.1_Linux_ARMv6.tar.gz"
+      sha256 "1f09c35f1631aac9cae196f672543ab2983837d9db3699c341df0f2415994902"
 
       def install
         bin.install "zht"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/forquare/zht/releases/download/0.1.0/zht_0.1.0_Linux_64bit.tar.gz"
-      sha256 "06c5875d0e7c782ffb6f350183bdcd54df6612146c6092decfe3e2f0e39098f8"
+      url "https://github.com/forquare/zht/releases/download/0.1.1/zht_0.1.1_Linux_64bit.tar.gz"
+      sha256 "cbc35969e14866a6d8258fa98a66fca962dc313cc127278a0ef7669b9081ad1a"
 
       def install
         bin.install "zht"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/forquare/zht/releases/download/0.1.0/zht_0.1.0_Linux_ARM64.tar.gz"
-      sha256 "0d11b267d028cb7faa124e3522e2fb14f2cf0dffc985cef68b5802b6f57bb779"
+      url "https://github.com/forquare/zht/releases/download/0.1.1/zht_0.1.1_Linux_ARM64.tar.gz"
+      sha256 "44593cbfb9d1f01d4674de5bc4dde309769e54e0ceaa29d2cce2a3a8acdca7d0"
 
       def install
         bin.install "zht"
