@@ -5,12 +5,12 @@
 class Zht < Formula
   desc " The ZSH History Tool "
   homepage "https://github.com/forquare/zht"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/forquare/zht/releases/download/0.1.1/zht_0.1.1_macOS_all.tar.gz"
-    sha256 "1d5c505b0d34f2bd65d71a73d632b4b97142ad9f9944c20d997a98a13a03cd34"
+    url "https://github.com/forquare/zht/releases/download/0.2.0/zht_0.2.0_macOS_all.tar.gz"
+    sha256 "a01677d848a32274378439280ae884142ea740762a89a7f4a0e0a537e639a673"
 
     def install
       bin.install "zht"
@@ -18,25 +18,25 @@ class Zht < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/forquare/zht/releases/download/0.1.1/zht_0.1.1_Linux_ARM64.tar.gz"
-      sha256 "d51cbef6a5d4336b3b0c3aebc190dc16e7f3d6c2bba69b4f77c70580ab957086"
-
-      def install
-        bin.install "zht"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/forquare/zht/releases/download/0.1.1/zht_0.1.1_Linux_64bit.tar.gz"
-      sha256 "6207d40e121efb4b0a52b7582479f802fca5c2f1db4ec398650eb203ede1d898"
+      url "https://github.com/forquare/zht/releases/download/0.2.0/zht_0.2.0_Linux_64bit.tar.gz"
+      sha256 "d00f3fa3a4c5f2fb3ea1ef26af8a0fd41452ee746bcfba8028d9b533a7c3d6f7"
 
       def install
         bin.install "zht"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/forquare/zht/releases/download/0.1.1/zht_0.1.1_Linux_ARMv6.tar.gz"
-      sha256 "490290819f69f4494ceb03c5e0de9af07af2a4f6cfd7ea15c11ddb4e38043998"
+      url "https://github.com/forquare/zht/releases/download/0.2.0/zht_0.2.0_Linux_ARMv6.tar.gz"
+      sha256 "f3e2c7a96363c46ce2eff537aab1ce4b22d5c8563c456b8c58d4d9b57c76b02a"
+
+      def install
+        bin.install "zht"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/forquare/zht/releases/download/0.2.0/zht_0.2.0_Linux_ARM64.tar.gz"
+      sha256 "3b1617bb6eed1dbe38f5b37fefb667d214ff0087e1f29f17a2b162b0640311e0"
 
       def install
         bin.install "zht"
