@@ -5,12 +5,12 @@
 class Zht < Formula
   desc " The ZSH History Tool "
   homepage "https://github.com/forquare/zht"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/forquare/zht/releases/download/0.2.0/zht_macOS_all.tar.gz"
-    sha256 "da413581ac9e0c77d22faec19a72b8bd18e559fdb73eb08208fae1e8083e9a6a"
+    url "https://github.com/forquare/zht/releases/download/0.3.0/zht_macOS_all.tar.gz"
+    sha256 "161fa60508b46d6610b83e69be9a13c68b30614ff4f252abaac3d0d7a105b51a"
 
     def install
       bin.install "zht"
@@ -18,25 +18,25 @@ class Zht < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/forquare/zht/releases/download/0.2.0/zht_Linux_ARM64.tar.gz"
-      sha256 "cd209bac3e2d34ccbf6994feefd931b8800216ed0188845242ad0967cb851eed"
+    if Hardware::CPU.intel?
+      url "https://github.com/forquare/zht/releases/download/0.3.0/zht_Linux_64bit.tar.gz"
+      sha256 "367e677589042ed8d23ee84c99be9398bf3897d4bd2a88ccec79031033aa56bc"
 
       def install
         bin.install "zht"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/forquare/zht/releases/download/0.2.0/zht_Linux_ARMv6.tar.gz"
-      sha256 "a3552bd23c81be4e9308615f6397b4e95b3811a88809ceccd91fa1439717b65d"
+      url "https://github.com/forquare/zht/releases/download/0.3.0/zht_Linux_ARMv6.tar.gz"
+      sha256 "48eb4a74d4f82dd0b52b6e66cfcab168db01a7fe1f0793bcc31973bcbca1b1f4"
 
       def install
         bin.install "zht"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/forquare/zht/releases/download/0.2.0/zht_Linux_64bit.tar.gz"
-      sha256 "31838e8e03169eb68abdc9432a4b37c9bc6b1c5550d5b8dbaba1281624776ddd"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/forquare/zht/releases/download/0.3.0/zht_Linux_ARM64.tar.gz"
+      sha256 "bec64a9749e49c442d270ba44155668a40ec68dd0c8a39160e56c9333584b544"
 
       def install
         bin.install "zht"
